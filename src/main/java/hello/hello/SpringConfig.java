@@ -1,5 +1,6 @@
 package hello.hello;
 
+import hello.hello.aop.TimeTraceAop;
 import hello.hello.repository.*;
 import hello.hello.service.MemberService;
 import jakarta.persistence.EntityManager;
@@ -23,7 +24,6 @@ public class SpringConfig {
     public MemberService memberService() {
         return new MemberService(memberRepository);
     }
-
 //    @Bean
 //    public MemberRepository memberRepository() {
 //        //return new MemoryMemberRepository();
